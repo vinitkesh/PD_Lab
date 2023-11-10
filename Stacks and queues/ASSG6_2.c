@@ -6,12 +6,11 @@ struct Stack {
     int Nums[MAX_SIZE];
 };
 
-void initializeStack(struct Stack *S);            
-void            push(struct Stack *S, int element);
-int              pop(struct Stack *S);      //returns the popped element
-int          isEmpty(struct Stack *S);      //returns 1 if stack is empty, 0 otherwise
+void initializeStack(struct Stack *S);
+void push(struct Stack *S, int element);
+int pop(struct Stack *S);
+int isEmpty(struct Stack *S);
 int nextGreaterElement(int Nums[], int N);
-///////////////////////////////////////////////////////////////////////////////////////////////
 
 int main() {
     int N;
@@ -19,15 +18,14 @@ int main() {
     scanf("%d", &N);
     int Nums[MAX_SIZE];
 
-    printf("Enter the array of %d elements: ", N);////Inputting the array
-    for (int i = 0; i < N; i++) {scanf("%d", &Nums[i]);}
+    printf("Enter the array of %d elements: ", N);
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &Nums[i]);
+    }
 
-    nextGreaterElement(Nums, N);// calling the answer function
+    nextGreaterElement(Nums, N);
     return 0;
 }
-
-
-////////  FUNCTIONS  //////////////////////////////////////////////////
 
 void initializeStack(struct Stack *S) {
     S->top = -1;
@@ -39,7 +37,7 @@ void push(struct Stack *S, int element) {
 }
 
 int pop(struct Stack *S) {
-    S->top--;
+    return S->Nums[(S->top)--];
 }
 
 int isEmpty(struct Stack *S) {
@@ -51,18 +49,15 @@ int nextGreaterElement(int Nums[], int N) {
     initializeStack(&S);
     int result[MAX_SIZE];
 
-    for(int i=0;i<N;i++){
-        result[i]=-1;
-    }
+    for (int i = 0; i < N; i++) {
+        result[i] = -1;
 
-    for(int i=0;i<N;i++){
-        for(int j=i+1;j<N;j++){
-            if(Nums[j]>Nums[i]){
-                result[i]=Nums[j];
-                break;
-            }
-
+        while (!isEmpty(&S) && Nums[i] > Nums[S.NumS[S.top]]) {
+            result[S.NumS[S.top]] = Nums[i];
+            pop(&S);
         }
+
+        push(&S, i);
     }
 
     // Print the result array
