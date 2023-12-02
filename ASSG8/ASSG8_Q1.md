@@ -21,6 +21,15 @@ value in the nodes of T in inorder.
 key value in the nodes of T in preorder.
 - Postorder(T ) - performs recursive postorder traversal of the Special BST T and prints the
 key value in the nodes of T in postorder.
+## Answer:
+- Find-Max : keep going right
+- Find-Left : keep going left
+  - Inorder :
+      Inorder(root.left)
+      print(root->data)
+      Inorder(root->right)
+- Preorder:
+   
 ### Input format:
 - Each line contains a character from ‘a’, ‘s’, ‘x’, ‘n’, ‘i’, ‘p’, ‘t’ or ‘e’ followed by at most one
 integer. The integers, if given, are in the range [1, 106].
