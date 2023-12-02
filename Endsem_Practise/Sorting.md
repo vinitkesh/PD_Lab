@@ -13,7 +13,30 @@
       i++
    ![Selection sort gfg](https://media.geeksforgeeks.org/wp-content/uploads/20230526165200/3.webp)
 ---
-## 3. [Merge Sort]()
+## 3. [Merge Sort]() O(nlogn) 
+   - Divide and conquer algorithm
+   - Has 2 important functions: merge and merge sort
+   ### Mergesort(arr,l,r)
+         if(l<r)
+            mergesort(arr,l,m)
+            mergesort(arr,m+1,r)
+            merge(arr,l,m,r)
+   ### Merge
+      - Create temp arrays L[n1] and R[n2] and copy the data
+      - i,j-0
+         k = l;
+          while (i <n1 && j < n2) {
+              if (L[i] <= R[j]) {
+                  arr[k] = L[i];
+                  i++;
+              }
+              else {
+                  arr[k] = R[j];
+                  j++;
+              }
+              k++;
+          }
+      - paste left out of the bigger array(L or R) in arr
 ---
 ## 4. [Quick Sort]()
 ---
