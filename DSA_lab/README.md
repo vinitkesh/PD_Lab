@@ -2,23 +2,29 @@
 
 ## Linked Lists:
 
-1. Implement linked list ADT with the following functions.
-    a. Insertion
-    b. Deletion
+1. Implement linked list ADT with the following functions.  
+    a. Insertion  
+    b. Deletion  
     c. Display
-2. Write a program to reverse a singly linked list.
-3. Write a program to detect whether a loop exists in the linked list. The program should also
+
+3. Write a program to reverse a singly linked list.
+
+4. Write a program to detect whether a loop exists in the linked list. The program should also
     print the starting node of the loop.
-4. Write a program to merge two linked lists alternatively.
-5. Write a program to merge two sorted linked lists into a single sorted list.
-6. Write a program to reverse a singly linked list in K groups:  
+
+5. Write a program to merge two linked lists alternatively.
+
+6. Write a program to merge two sorted linked lists into a single sorted list.
+
+7. Write a program to reverse a singly linked list in K groups:  
     Given a linked list, write a function to reverse every k nodes (where k is an input to the
-    function).
+    function).  
     **_Input_** _: 1->2->3->4->5->6->7->8->NULL, K = 3_  
     **_Output_** _: 3->2->1->6->5->4->8->7->NULL_  
     **_Input_** _: 1->2->3->4->5->6->7->8->NULL, K = 5_  
     **_Output_** _: 5->4->3->2->1->8->7->6->NULL_  
-7. Write a program to sort the elements in a singly linked list using selection sort.
+
+8. Write a program to sort the elements in a singly linked list using selection sort.
 
 ## Stack:
 
