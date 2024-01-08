@@ -1,3 +1,9 @@
+// Menu driven programme to do the following :
+    // 1. Insert at front/back
+    // 2. delete from back/front
+    // 3. display the SLL
+    // 4. Reverse and display the SLL
+
 #include <stdio.h>
 #include<stdlib.h>
 
@@ -8,9 +14,10 @@ struct SLL {
 
 typedef struct SLL * node;
 
-node head=NULL;
+node head=NULL;// globally defined head and tail so that we dont have to pass it all the time
 node tail=NULL;
 
+// List of all functions:
 node createNode(int x);
 node insert_front(int x);
 node insert_back(int x);
@@ -19,9 +26,7 @@ node delete_back();
 int search();
 void displayLL();
 void reverseLL();
-
-
-
+//////////////////////////////////////////////////////////////////////////////////////
 int main()
 {
     printf("Welcome to Menu driven programme on SLL:\n Enter your option:\n");
@@ -50,34 +55,27 @@ int main()
             case 3:
                 delete_front();
             break;
-
             case 4:
                 delete_back();
             break;
-
             case 5:
                 displayLL();
             break;
-
             case 6:
                 reverseLL();
                 printf("reversed LL is : \n");
                 displayLL();
             break;
-
             case 0:
-
             break;
-
             default:
                 break;
         }
     }
 }
+//////////////////////////////////////////////////////////////////////////////////////
 
-
-
-////////////////////////////
+//////////////////////////////
 node createNode(int x){
     node newnode = (node)malloc(sizeof(struct SLL));
     newnode->val=x;
@@ -121,7 +119,6 @@ node delete_back(){
             prev = temp;
             temp = temp->next;
         }
-
         if(prev != NULL){
             free(temp);
             prev->next = NULL;
