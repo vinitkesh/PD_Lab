@@ -80,4 +80,34 @@ Examples:
 3. Implement a stack using the queue data structure.
 4. Implement a queue using the stack data structure.
 
+# Takeaways/Solution : 
+
+## Linked List :
+
+### 3 pointer reversal :
+
+```c
+void reverseLL(){
+    if (head == NULL || head->next == NULL) {
+        // Empty list or only one element, no need to reverse
+        return;
+    }
+
+    node current = head;
+    node prev = NULL;
+    node next = NULL;
+
+    while (current != NULL) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+
+    // Update head and tail
+    tail = head;
+    head = prev;
+}
+```
+
 
