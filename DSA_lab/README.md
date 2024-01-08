@@ -2,12 +2,14 @@
 
 ## Linked Lists:
 
-1. Implement linked list ADT with the following functions.  
+1. [Code](https://github.com/vinitkesh/PD_Lab/blob/main/DSA_lab/code/LL1.c)
+Implement linked list ADT with the following functions.  
     a. Insertion  
     b. Deletion  
     c. Display
 
-3. Write a program to reverse a singly linked list.
+3. [Code](https://github.com/vinitkesh/PD_Lab/blob/main/DSA_lab/code/LL1.c)
+Write a program to reverse a singly linked list.
 
 4. Write a program to detect whether a loop exists in the linked list. The program should also
     print the starting node of the loop.
